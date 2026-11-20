@@ -43,6 +43,30 @@
       --font-body: 'Inter', sans-serif;
     }
 
+        /* ===== КНОПКИ ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+      white-space: nowrap; /* ВОТ ЭТО ПРЕДОТВРАТИТ ПЕРЕНОС ТЕКСТА */
+    }
+
+    /* Защита иконок от сжатия */
+    .btn svg {
+      flex-shrink: 0;
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -926,16 +950,20 @@
           и карты, которые запоминаются.
         </p>
         <p class="section__desc" style="margin-bottom: 16px;">Добавляйте в желаемое:</p>
-          <div class="hero__actions">
-            <a href="#" class="btn btn--vk">
-              <img src="images/VKIcon.svg" alt="VK Play" width="20" height="20">
-              VK Play
-            </a>
-            <a href="#" class="btn btn--epic">
-              <img src="images/EpicIcon.png" alt="Epic Games" width="20" height="20">
-              Epic Games
-            </a>
-          </div>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--vk">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.576-1.496c.588-.19 1.341 1.26 2.14 1.818.604.42 1.064.328 1.064.328l2.136-.03s1.117-.07.587-.956c-.043-.072-.308-.66-1.587-1.866-1.338-1.262-1.158-1.058.453-3.242 1.829-2.482 2.56-4.002 2.332-4.654-.218-.622-1.559-.458-1.559-.458l-2.404.015s-.178-.025-.31.056c-.13.08-.213.265-.213.265s-.38 1.027-.888 1.903c-1.07 1.854-1.498 1.953-1.673 1.838-.407-.268-.305-1.078-.305-1.653 0-1.796.267-2.543-.52-2.736-.26-.063-.452-.105-1.118-.112-.854-.01-1.576.003-1.985.207-.272.136-.482.44-.354.457.158.02.516.098.706.36.245.337.237 1.096.237 1.096s.142 2.148-.33 2.414c-.323.182-.767-.19-1.718-1.887-.488-.856-.857-1.802-.857-1.802s-.071-.177-.198-.272c-.153-.114-.367-.15-.367-.15l-2.284.015s-.343.01-.469.162c-.112.135-.009.414-.009.414s1.788 4.261 3.812 6.407c1.856 1.966 3.965 1.837 3.965 1.837h.956z"/>
+            </svg>
+            VK Play
+          </a>
+          <a href="#" class="btn btn--epic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M12 2L3 5.3v13.4L12 22l9-3.3V5.3L12 2zm4.5 15.5l-4.5 1.6-4.5-1.6V6.5l4.5-1.6 4.5 1.6v11zm-6.4-8.9v2.3H14v2H10.1v2.3h4.4v2H8.1V6.6h6.4v2z"/>
+            </svg>
+            Epic Games
+          </a>
+        </div>
           </a>
         </div>
       </div>
